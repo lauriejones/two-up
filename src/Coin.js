@@ -26,6 +26,8 @@ const Card = styled.div`
   position: relative;
   width: 20vmin;
   height: 20vmin;
+  min-width: 6rem;
+  min-height: 6rem;
   border-radius: 999px;
   /* perspective: 500px; */
 `;
@@ -58,7 +60,6 @@ const Front = styled.div`
   width: 100%;
   background: white;
   line-height: 300px;
-  color: #03446a;
   text-align: center;
   font-size: 60px;
   border-radius: 5px;
@@ -71,7 +72,6 @@ const Back = styled.div`
   width: 100%;
   background: white;
   line-height: 300px;
-  color: #03446a;
   text-align: center;
   font-size: 60px;
   border-radius: 5px;
@@ -83,6 +83,8 @@ const Back = styled.div`
 const BaseCoin = styled.div`
   width: 20vmin;
   height: 20vmin;
+  min-width: 6rem;
+  min-height: 6rem;
   border-radius: 999px;
   background-color: silver;
   box-shadow: inset 0 0 0 0.5rem hsla(0, 0%, 0%, 0.2),
@@ -106,6 +108,8 @@ const BaseCoin = styled.div`
 const Heads = styled(BaseCoin)`
   position: absolute;
   background: linear-gradient(45deg, ${COIN_HEADS}, silver);
+  color: #302f2c;
+
   ::before {
     content: "H";
   }
@@ -114,6 +118,8 @@ const Heads = styled(BaseCoin)`
 const Tails = styled(BaseCoin)`
   position: absolute;
   background: linear-gradient(45deg, ${COIN_TAILS}, silver);
+  color: #463715;
+
   ::before {
     content: "T";
   }

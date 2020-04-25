@@ -14,7 +14,8 @@ const Grid = styled.div`
     "header header"
     "coin1 coin2"
     "toss-again toss-again"
-    "result result";
+    "result result"
+    "footer footer";
   gap: 3rem;
   justify-items: center;
   max-width: 800px;
@@ -37,7 +38,7 @@ const Coin2 = styled.div`
 `;
 const TossAgain = styled.button`
   grid-area: toss-again;
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
   background-color: #3f51b5;
   background: linear-gradient(to bottom, #2196f3, #3f51b5);
   color: white;
@@ -55,6 +56,20 @@ const TossAgain = styled.button`
   &:focus {
     background-color: linear-gradient(to bottom, #03a9f4, #3f51b5);
     transform: translateY(-2px);
+  }
+`;
+
+const Heading = styled.h1`
+  font-size: 4rem;
+`;
+
+const Footer = styled.footer`
+  grid-area: footer;
+  align-self: flex-end;
+  color: #6a6a6a;
+
+  a {
+    color: inherit;
   }
 `;
 
@@ -94,12 +109,12 @@ export default function App() {
       </Helmet>
       <Grid>
         <Header>
-          <h1>
+          <Heading>
             Virtual Two-up{" "}
             <span role="img" aria-label="Australian flag">
               🇦🇺
             </span>
-          </h1>
+          </Heading>
         </Header>
 
         <Coin1>
@@ -127,6 +142,11 @@ export default function App() {
           clearHistory={clearHistory}
           loading={loading}
         />
+        <Footer>
+          Made in a rush by{" "}
+          <a href="https://www.lauriejones.me">Laurie Jones</a> for ANZAC Day
+          2020. <a href="https://github.com/lauriejones/two-up">GitHub</a>
+        </Footer>
       </Grid>
     </div>
   );
