@@ -51,7 +51,7 @@ const Coin = styled.div`
 `;
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
   grid-template-rows: auto;
   grid-template-areas:
     "header header"
